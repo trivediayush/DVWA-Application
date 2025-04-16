@@ -6,12 +6,23 @@ This project demonstrates how to deploy **Damn Vulnerable Web Application (DVWA)
 📸 Screenshots
 --------------
 
-*   Minikube Running: [View](https://your-screenshot-url.com/minikube-start.png)
-*   DVWA Deployment: [View](https://your-screenshot-url.com/dvwa-deploy.png)
-*   Login Page: [View](https://your-screenshot-url.com/dvwa-login.png)
-*   Command Injection Result: [View](https://your-screenshot-url.com/command-injection.png)
-*   SQL Injection Result: [View](https://your-screenshot-url.com/sql-injection.png)
-*   Stored XSS Alert: [View](https://your-screenshot-url.com/xss-alert.png)
+*   Minikube Running:
+*   <img src="Screenshots/Cmd.png/">
+*   <img src="Screenshots/cmd1.png/">
+*   <img src="Screenshots/cmd3.png/">
+
+*   DVWA Deployment: 
+*   <img src="Screenshots/cmd4.png/">
+
+*   Command Injection Result:
+*   <img src="Screenshots/dvwa1.png/">
+
+*   SQL Injection Result:
+*   <img src="Screenshots/dvwa3.png/">
+
+*   Stored XSS Alert:
+*   <img src="Screenshots/dvwa4.png/">
+*   <img src="Screenshots/dvwa5.png/">
 
 🛠 Setup Steps
 --------------
@@ -93,15 +104,11 @@ Go to **DVWA Security** tab and set security level to `LOW`.
 *   Input: `127.0.0.1; whoami`
 *   Result: Displays container user like `www-data`
 
-![Command Injection Screenshot](https://your-screenshot-url.com/command-injection.png)
-
 ### 2️⃣ SQL Injection
 
 *   Go to: **DVWA → SQL Injection**
 *   Input: `1' OR '1'='1`
 *   Result: Database returns all users bypassing login filters
-
-![SQL Injection Screenshot](https://your-screenshot-url.com/sql-injection.png)
 
 ### 3️⃣ Stored Cross Site Scripting (XSS)
 
@@ -111,8 +118,6 @@ Go to **DVWA Security** tab and set security level to `LOW`.
         <script>alert('XSS attack!')</script>
     
 *   Result: Alert pops up when viewing the page
-
-![Stored XSS Screenshot](https://your-screenshot-url.com/xss-alert.png)
 
 🧹 Cleanup
 ----------
@@ -130,8 +135,8 @@ To remove the deployment and stop the cluster:
 
 * * *
 
-Created for security testing & education. Use responsibly in isolated environments only.
+Created for practicing security testing.
 
 📌 Author
 -------------
-# 
+# Ayush Trivedi
